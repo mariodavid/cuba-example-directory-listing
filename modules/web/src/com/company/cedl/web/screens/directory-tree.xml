@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://caption"
+        class="com.company.cedl.web.screens.DirectoryTree"
+        messagesPack="com.company.cedl.web.screens">
+    <dsContext>
+        <hierarchicalDatasource
+                id="directoriesDs"
+                class="com.company.cedl.entity.Directory"
+                datasourceClass="com.company.cedl.web.screens.DirectoryDatasource"
+                hierarchyProperty="parent"
+        />
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+
+    <layout expand="treeVBox">
+        <vbox id="treeVBox" margin="true" spacing="true" expand="tree">
+        <hbox spacing="true" margin="true" expand="startPath" width="100%">
+            <textField id="startPath"/>
+            <buttonsPanel><button invoke="touch" caption="msg://createFile"/></buttonsPanel>
+        </hbox>
+        <tree id="tree"
+              width="100%">
+            <treechildren datasource="directoriesDs" captionProperty="name" hierarchyProperty="parent"/>
+        </tree>
+        </vbox>
+    </layout>
+</window>
