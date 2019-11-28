@@ -1,4 +1,4 @@
-## CUBA example - Directory Listing
+## CUBA Example - Directory Listing
 
 ![Overview](https://github.com/mariodavid/cuba-example-directory-listing/blob/master/img/overview.png)
 
