@@ -18,7 +18,12 @@
         <vbox id="treeVBox" margin="true" spacing="true" expand="tree">
         <hbox spacing="true" margin="true" expand="startPath" width="100%">
             <textField id="startPath"/>
-            <buttonsPanel><button invoke="touch" caption="msg://createFile"/></buttonsPanel>
+            <buttonsPanel>
+                <button invoke="open" icon="FOLDER_OPEN"/>
+                <button invoke="touch" icon="FILE_O"/>
+                <button invoke="show" icon="font-icon:SEARCH"/>
+                <button invoke="removeFile" icon="font-icon:REMOVE"/>
+            </buttonsPanel>
         </hbox>
         <tree id="tree"
               width="100%">

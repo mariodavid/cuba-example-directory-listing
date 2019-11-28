@@ -12,10 +12,21 @@ public class Directory extends AbstractNotPersistentEntity {
     protected String name;
 
     @MetaProperty
+    protected Boolean file;
+
+    @MetaProperty
     protected String path;
 
     @MetaProperty(mandatory = true)
     protected Directory parent;
+
+    public Boolean getFile() {
+        return file;
+    }
+
+    public void setFile(Boolean file) {
+        this.file = file;
+    }
 
     public void setParent(Directory parent) {
         this.parent = parent;

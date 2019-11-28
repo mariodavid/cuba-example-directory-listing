@@ -10,5 +10,7 @@ public interface DirectoryService {
 
     Collection<Directory> listDirectories(String startPath);
 
-    void touchFileInDirectory(Directory directory);
+    String touchFileInDirectory(Directory directory);
+    String openFile(Directory file);
+    void removeFile(Directory file);
 }
